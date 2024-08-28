@@ -76,5 +76,21 @@ namespace CapaDatos
             comando.Parameters.Clear();
         }
 
+        public DataTable Buscar(string nombre)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "BuscarProducto";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@nombre", nombre);
+
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+
+            comando.Parameters.Clear();
+
+            return tabla;
+        }
+
     }
 }

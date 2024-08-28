@@ -104,5 +104,22 @@ namespace CapaPresentacion
                 MessageBox.Show("seleccione una fila por favor");
 
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            filtro();
+        }
+
+        private void filtro()
+        {
+            objetoCN = new CN_Productos();
+
+            // Supongamos que tienes un TextBox llamado txtBuscar para introducir el nombre del producto.
+            string nombreProducto = txtBuscar.Text;
+
+            // Llamada al método Buscar y asignación del resultado a un DataGridView
+            dataGridView1.DataSource = objetoCN.BuscarProducto(nombreProducto);
+
+        }
     }
 }

@@ -34,5 +34,10 @@ namespace CapaNegocio
             objetoCD.Eliminar(Convert.ToInt32(id));
         }
 
+        public DataTable BuscarProducto(string nombre)
+        {
+            return objetoCD.Buscar(nombre);
+        }
+
     }
 }
