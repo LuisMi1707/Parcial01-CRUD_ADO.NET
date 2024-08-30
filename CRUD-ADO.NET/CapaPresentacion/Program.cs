@@ -14,9 +14,15 @@ namespace CapaPresentacion
         [STAThread]
         static void Main()
         {
+            // Habilita el uso de estilos visuales modernos en la aplicación.
             Application.EnableVisualStyles();
+
+            // Configura la aplicación para usar un motor de renderizado de texto compatible.
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // Inicia y ejecuta la aplicación con el formulario principal (Form1).
             Application.Run(new Form1());
         }
     }
 }
+
