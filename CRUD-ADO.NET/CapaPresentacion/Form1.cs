@@ -121,5 +121,7 @@ namespace CapaPresentacion
             dataGridView1.DataSource = objetoCN.BuscarProducto(nombreProducto);
 
         }
+
+       
     }
 }
