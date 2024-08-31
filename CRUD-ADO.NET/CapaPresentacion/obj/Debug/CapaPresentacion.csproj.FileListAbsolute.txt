@@ -39,3 +39,4 @@ C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaPres
 C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaPresentacion\bin\Debug\CapaNegocio.pdb
 C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaPresentacion\bin\Debug\CapaDatos.pdb
 C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaPresentacion\bin\Debug\CapaDatos.dll.config

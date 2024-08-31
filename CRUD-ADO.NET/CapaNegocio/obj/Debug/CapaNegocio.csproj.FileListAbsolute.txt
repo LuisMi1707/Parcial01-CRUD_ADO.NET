@@ -21,3 +21,4 @@ C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaNego
 C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\HP\OneDrive\GUIAS_PROGRA_2\Parcial01-CRUD_ADO.NET\CRUD-ADO.NET\CapaNegocio\bin\Debug\CapaDatos.dll.config

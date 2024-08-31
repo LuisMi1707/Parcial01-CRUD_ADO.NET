@@ -13,126 +13,120 @@ namespace CapaPresentacion
 {
     public partial class Form1 : Form
     {
-        // Instancia de la capa de negocio para gestionar los productos.
         CN_Productos objetoCN = new CN_Productos();
-        private string idProducto = null;  // Almacena el ID del producto seleccionado para editar o eliminar.
-        private bool Editar = false;  // Indica si estamos en modo de edición o inserción.
+        private string idProducto = null;
+        private bool Editar = false;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        // Método que se ejecuta cuando se carga el formulario.
         private void Form1_Load(object sender, EventArgs e)
         {
-            MostrarProdctos();  // Muestra todos los productos al cargar el formulario.
+            MostrarProdctos();
         }
 
-        // Método para mostrar los productos en el DataGridView.
         private void MostrarProdctos()
         {
+
             CN_Productos objeto = new CN_Productos();
-            dataGridView1.DataSource = objeto.MostrarProd();  // Asigna los productos al DataGridView.
+            dataGridView1.DataSource = objeto.MostrarProd();
         }
 
-        // Evento para el botón Guardar (inserta o edita un producto).
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Inserción de un nuevo producto.
+            //INSERTAR
             if (Editar == false)
             {
                 try
                 {
-                    objetoCN.InsertarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
-                    MessageBox.Show("Producto insertado correctamente.");
-                    MostrarProdctos();  // Actualiza la lista de productos.
-                    limpiarForm();  // Limpia los campos del formulario.
+                    objetoCN.InsertarPRod(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
+                    MessageBox.Show("se inserto correctamente");
+                    MostrarProdctos();
+                    limpiarForm();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo insertar el producto debido a: " + ex.Message);
+                    MessageBox.Show("no se pudo insertar los datos por: " + ex);
                 }
             }
-            // Edición de un producto existente.
+            //EDITAR
             if (Editar == true)
             {
+
                 try
                 {
                     objetoCN.EditarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, idProducto);
-                    MessageBox.Show("Producto editado correctamente.");
-                    MostrarProdctos();  // Actualiza la lista de productos.
-                    limpiarForm();  // Limpia los campos del formulario.
-                    Editar = false;  // Resetea el estado de edición.
+                    MessageBox.Show("se edito correctamente");
+                    MostrarProdctos();
+                    limpiarForm();
+                    Editar = false;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo editar el producto debido a: " + ex.Message);
+                    MessageBox.Show("no se pudo editar los datos por: " + ex);
                 }
             }
         }
 
-        // Evento para el botón Editar (prepara la edición de un producto).
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            // Verifica si hay una fila seleccionada en el DataGridView.
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                Editar = true;  // Cambia el estado a edición.
-                // Rellena los campos del formulario con los valores del producto seleccionado.
+                Editar = true;
                 txtNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtMarca.Text = dataGridView1.CurrentRow.Cells["Marca"].Value.ToString();
                 txtDesc.Text = dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
                 txtPrecio.Text = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
                 txtStock.Text = dataGridView1.CurrentRow.Cells["Stock"].Value.ToString();
-                idProducto = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();  // Almacena el ID del producto.
+                idProducto = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
             }
             else
-            {
-                MessageBox.Show("Seleccione una fila, por favor.");
-            }
+                MessageBox.Show("seleccione una fila por favor");
         }
 
-        // Método para limpiar los campos del formulario.
         private void limpiarForm()
         {
             txtDesc.Clear();
-            txtMarca.Clear();
+            txtMarca.Text = "";
             txtPrecio.Clear();
             txtStock.Clear();
             txtNombre.Clear();
         }
 
-        // Evento para el botón Eliminar (elimina un producto).
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            // Verifica si hay una fila seleccionada en el DataGridView.
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                idProducto = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();  // Obtiene el ID del producto.
-                objetoCN.EliminarProd(idProducto);  // Llama al método para eliminar el producto.
-                MessageBox.Show("Producto eliminado correctamente.");
-                MostrarProdctos();  // Actualiza la lista de productos.
+                idProducto = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                objetoCN.EliminarPRod(idProducto);
+                MessageBox.Show("Eliminado correctamente");
+                MostrarProdctos();
             }
             else
-            {
-                MessageBox.Show("Seleccione una fila, por favor.");
-            }
+                MessageBox.Show("seleccione una fila por favor");
+
         }
 
-        // Evento para filtrar productos a medida que se escribe en el TextBox de búsqueda.
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             filtro();
         }
 
-        // Método para filtrar y buscar productos por nombre.
         private void filtro()
         {
             objetoCN = new CN_Productos();
-            string nombreProducto = txtBuscar.Text;  // Obtiene el texto de búsqueda.
-            dataGridView1.DataSource = objetoCN.BuscarProducto(nombreProducto);  // Filtra y actualiza el DataGridView.
+
+            // Supongamos que tienes un TextBox llamado txtBuscar para introducir el nombre del producto.
+            string nombreProducto = txtBuscar.Text;
+
+            // Llamada al método Buscar y asignación del resultado a un DataGridView
+            dataGridView1.DataSource = objetoCN.BuscarProducto(nombreProducto);
+
         }
+
+
     }
 }
 
