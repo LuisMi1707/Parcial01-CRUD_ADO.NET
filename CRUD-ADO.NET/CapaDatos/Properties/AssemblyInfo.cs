@@ -2,35 +2,39 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// La información general sobre un ensamblado se controla mediante el siguiente 
-// conjunto de atributos. Cambie estos atributos para modificar la información
-// asociada con un ensamblado.
+// Título del ensamblado: Es el nombre del proyecto o módulo. En este caso, "CapaDatos".
 [assembly: AssemblyTitle("CapaDatos")]
+
+// Descripción del ensamblado: Proporciona una descripción del ensamblado. Aquí no se ha especificado ninguna descripción.
 [assembly: AssemblyDescription("")]
+
+// Configuración del ensamblado: Indica la configuración del ensamblado (por ejemplo, "Debug" o "Release"). En este caso, no se ha especificado.
 [assembly: AssemblyConfiguration("")]
+
+// Compañía: Especifica la compañía que desarrolló el ensamblado. En este caso, no se ha especificado.
 [assembly: AssemblyCompany("")]
+
+// Producto: Especifica el nombre del producto con el que está asociado el ensamblado. En este caso, el producto es "CapaDatos".
 [assembly: AssemblyProduct("CapaDatos")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+
+// Copyright: Indica los derechos de autor asociados con el ensamblado. En este caso, es "Copyright © 2018".
+[assembly: AssemblyCopyright("Copyright © 2018")]
+
+// Marca comercial: Especifica la marca registrada asociada con el ensamblado. En este caso, no se ha especificado.
 [assembly: AssemblyTrademark("")]
+
+// Cultura: Indica la cultura asociada con el ensamblado (por ejemplo, el idioma). En este caso, no se ha especificado ninguna cultura.
 [assembly: AssemblyCulture("")]
 
-// Si establece ComVisible como false, los tipos de este ensamblado no estarán visibles 
-// para los componentes COM. Si necesita obtener acceso a un tipo de este ensamblado desde 
-// COM, establezca el atributo ComVisible como true en este tipo.
+// ComVisible: Indica si el ensamblado es visible para componentes COM. `false` significa que no es visible.
 [assembly: ComVisible(false)]
 
-// El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
+// GUID: Es un identificador único para el ensamblado en un entorno COM. Este GUID se utiliza si el ensamblado es visible para COM.
 [assembly: Guid("0d111829-81f4-4563-bbd8-3086270a5414")]
 
-// La información de versión de un ensamblado consta de los cuatro valores siguientes:
-//
-//      Versión principal
-//      Versión secundaria 
-//      Número de compilación
-//      Revisión
-//
-// Puede especificar todos los valores o establecer como predeterminados los números de compilación y de revisión 
-// mediante el carácter '*', como se muestra a continuación:
-// [assembly: AssemblyVersion("1.0.*")]
+// AssemblyVersion: Especifica la versión principal del ensamblado. En este caso, es "1.0.0.0".
 [assembly: AssemblyVersion("1.0.0.0")]
+
+// AssemblyFileVersion: Especifica la versión del archivo del ensamblado. En este caso, también es "1.0.0.0".
 [assembly: AssemblyFileVersion("1.0.0.0")]
+

@@ -42,13 +42,13 @@ namespace CapaPresentacion
                 try
                 {
                     objetoCN.InsertarPRod(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
-                    MessageBox.Show("se inserto correctamente");
+                    MessageBox.Show("Datos insertados correctamente");
                     MostrarProdctos();
                     limpiarForm();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se pudo insertar los datos por: " + ex);
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex);
                 }
             }
             //EDITAR
@@ -58,14 +58,14 @@ namespace CapaPresentacion
                 try
                 {
                     objetoCN.EditarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, idProducto);
-                    MessageBox.Show("se edito correctamente");
+                    MessageBox.Show("Datos editados correctamente");
                     MostrarProdctos();
                     limpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se pudo editar los datos por: " + ex);
+                    MessageBox.Show("No se pudo editar los datos por: " + ex);
                 }
             }
         }
@@ -83,7 +83,7 @@ namespace CapaPresentacion
                 idProducto = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor");
         }
 
         private void limpiarForm()
